@@ -1,0 +1,128 @@
+1.SUM AND AVERAGE INA ANA ARRAY
+import java.util.*;
+public class main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int sum=0;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            sum+=arr[i];
+        }
+        int average=sum/n;
+        System.out.println("sum:" +sum);
+        System.out.println("average:"+average);
+    }
+}
+2.NO.OF EVEN AND ODD ARE THERE IN AN ARRAY
+import java.util.*;
+public class main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int even=0;
+        int odd=0;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            if(arr[i]%2==0){
+                even++;
+            }
+            else{
+                odd++;
+            }
+        }
+        System.out.println("evencount:"+even);
+        System.out.println("oddcount:"+odd);
+    }
+}
+3.THE ARRAY IS SORTED IN ASCENDING ORDER OR NOT
+import java.util.*;
+public class main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<n-1;i++){
+            if(arr[i]>arr[i+1]){
+                System.out.print("false");
+                break;
+            }else if(i+1==n && arr[i]<arr[i+1]){
+                System.out.print("true");
+            }
+        }
+    }
+}
+4.REMOVE THE DUPLICATE ELEMENT IN AN ARRAY 
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<n;i++){
+            int x=arr[i];
+            map.put(x,map.getOrDefault(x,0)+1);
+        }
+        for(int key:map.keySet()){
+            int x=map.get(key);
+            if(x>1){
+                System.out.print(key+" ");
+            }
+        }
+    }
+}
+5.REMOVE A TARGETD ELEMENT IN AN ARRAY
+import java.util.*;
+class c10{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int target=sc.nextInt();
+        ArrayList<Integer> sap=new ArrayList<>();
+        for(int i=0;i<n;i++){
+            if(arr[i]!=target){
+                sap.add(arr[i]);
+            }
+        }
+        int z=sap.size();
+        for(int i=0;i<z;i++){
+            System.out.print(sap.get(i)+" ");
+        }
+    }
+}
+6.FIND THE PAIR OF SUM TO THE TARGETED ELEMENT
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<n;i++){
+            int x=arr[i];
+            map.put(x,map.getOrDefault(x,0)+1);
+        }
+        for(int key:map.keySet()){
+            int x=map.get(key);
+            if(x>1){
+                System.out.print(key+" ");
+            }
+        }
+    }
+}
