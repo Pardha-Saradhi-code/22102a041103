@@ -197,3 +197,104 @@ class Main{
         }
     }
 }
+removing seepical characters
+import java.util.*;
+class c12{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        ArrayList<Character> s=new ArrayList<>();
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            if(Character.isLetterOrDigit(ch)){
+                System.out.print(ch);
+            }
+        }
+    }
+}
+sort with pointers
+import java.util.*;
+class c13{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int a=0;
+        int b=n-1;
+        for(int i=0;i<n;i++){
+            int temp=arr[a];
+            arr[a]=arr[b];
+            arr[b]=temp;
+            a++;
+            b--;
+            if(a>b){
+                break;
+            }
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+vowel and consonant count
+import java.util.*;
+class c14{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        char Vowel[]={'a','e','i','o','u','A','E','I','O','U'};
+        int vc=0;
+        int x=str.length();
+        for(int i=0;i<x;i++){
+            char ch=str.charAt(i);
+            for(int j=0;j<Vowel.length;j++){
+                if(ch==Vowel[j]){
+                    vc++;
+                }
+            }
+        }
+        int d=x-vc;
+        System.out.print(vc+" "+d);
+    }
+}
+merge sort array
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int l=nums1.length;
+        int x=0;
+        for(int i=m;i<l;i++){
+            nums1[i]=nums2[x];
+            x++;
+        }
+
+        // simple bubble sort
+        for(int i=0;i<l-1;i++){
+            for(int j=0;j<l-1-i;j++){
+                if(nums1[j]>nums1[j+1]){
+                    int temp=nums1[j];
+                    nums1[j]=nums1[j+1];
+                    nums1[j+1]=temp;
+                }
+            }
+        }
+
+        for(int i=0;i<l;i++){
+            System.out.print(nums1[i]+" ");
+        }
+    }
+}
+search insert postion
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int n=nums.length;
+        for(int i=0;i<n;i++){
+            if(nums[i]>=target){
+                return i;
+            }  
+        }  
+        return n; 
+    }
+}
